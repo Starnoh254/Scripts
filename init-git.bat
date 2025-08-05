@@ -1,12 +1,9 @@
 @echo off
-set /p REPO_NAME="Enter the folder/repo name: "
+echo Current directory: %CD%
 set /p COMMIT_MSG="Enter initial commit message: "
 set /p REMOTE_URL="Enter GitHub remote URL: "
 
-REM Navigate to repo folder
-cd %REPO_NAME%
-
-echo Initializing git repo...
+echo Initializing git repo in current directory...
 git init
 
 echo Adding files...

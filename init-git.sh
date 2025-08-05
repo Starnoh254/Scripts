@@ -1,13 +1,10 @@
 #!/bin/bash
 
-read -p "Enter the folder/repo name: " REPO_NAME
+echo "📁 Current directory: $(pwd)"
 read -p "Enter initial commit message: " COMMIT_MSG
 read -p "Enter GitHub remote URL: " REMOTE_URL
 
-# Navigate to repo folder
-cd "$REPO_NAME" || { echo "❌ Folder not found"; exit 1; }
-
-echo "🚀 Initializing git repo..."
+echo "🚀 Initializing git repo in current directory..."
 git init
 
 echo "📦 Adding files..."
